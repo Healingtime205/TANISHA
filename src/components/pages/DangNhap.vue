@@ -8,7 +8,6 @@
             <input type="text" class="form-control" v-model="mk" placeholder="Mật khẩu">
             <div class="row">
                 <button class="btn mt-3" @click="DNTC">Đăng nhập</button>
-                <button class="btn mt-3" @click.prevent="goToProducts">Đăng ký</button>
             </div>
         </div>
     </div>
@@ -52,7 +51,7 @@ export default{
     padding: 20px;
 }
 .formdn button{
-    background-color: rgb(50, 205, 108);
+    background-color: rgb(247, 137, 206);
     color: #fff;
     width: 100%;
 }

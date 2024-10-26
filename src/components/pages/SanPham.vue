@@ -68,61 +68,69 @@
     }
 </script>
 <style>
-.khung{
-    padding: 20px 10px;
-}
-h1{
-    text-align: center;
-    color: #FF5622;
-}
-.pick{
-    margin: 5px;
-    border-radius: 5px;
-}
+
 .product-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 45px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Hiển thị 3 sản phẩm mỗi dòng */
+  gap: 20px; /* Khoảng cách giữa các sản phẩm */
+  padding: 30px; /* Thêm khoảng cách xung quanh lưới */
 }
+
 .product-item {
-    width: 20%;
-    height: 400px;
-    border:10px #FF5622;
-    background-color: #fff;
-    padding: 12px;
-    margin-bottom: 12px;
-    text-align: center;
-    white-space: pre-wrap;
-    overflow: hidden;
+  background-color: #f9f9f9; /* Màu nền cho mỗi sản phẩm */
+  padding: 15px;
+  border-radius: 10px; /* Bo góc cho sản phẩm */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ */
+  text-align: center; /* Căn giữa văn bản */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng khi hover */
+  height: 400px;
+}
+
+.product-item:hover {
+  transform: scale(1.05); /* Phóng to khi hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ khi hover */
 }
 
 .product-item img {
-    width: 100%;
-    height: 60%;
-    margin-bottom: 20px;
-    object-fit: cover;
-} 
+  width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng của sản phẩm */
+  height: 55%; /* Giữ tỉ lệ hình ảnh */
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 5px; /* Bo góc cho hình ảnh */
+}
+
 .product-item-text h4 {
-    font-size: 1rem;
+  font-size: 18px; /* Kích thước chữ cho tên sản phẩm */
+  margin-bottom: 10px; /* Khoảng cách dưới tên sản phẩm */
 }
-.product-item button {
-    margin-bottom: 12px;
-    height: 30px;
-    padding: 0 12px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
+
+.product-item-text p {
+  font-size: 14px; /* Kích thước chữ cho mô tả và giá */
+  margin-bottom: 5px; /* Khoảng cách dưới mỗi đoạn */
+  color: #333;
 }
-.product-item button:hover {
-    background-color: rgb(203, 236, 119);
-    transform: translateY(-5px);
-    box-shadow: 0px 5px 10px rgba(90, 151, 0, 0.908);
+
+.product-item-text p span {
+  font-weight: bold; /* Làm đậm chữ cho giá */
 }
-.btn-added {
-    background-color: gray;
-    color: white;
-    border: none;
-    cursor: not-allowed;
+
+button {
+  background-color: #e74c3c; /* Màu nền nút "Thêm vào giỏ hàng" */
+  color: #fff; /* Màu chữ */
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c0392b; /* Đổi màu khi hover */
+}
+
+button i {
+  margin-right: 5px; /* Khoảng cách giữa icon và chữ */
 }
 
 </style>

@@ -59,6 +59,20 @@ export default{
    justify-content: center;
     align-items: center; 
 }
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Hai cột, có thể điều chỉnh theo ý thích */
+    gap: 900px; /* Khoảng cách giữa các cột */
+}
+
+label, input {
+    display: block;
+    width: 100%;
+    margin:20px 0px 20px 0px ;
+}
+input{
+    height: 30px;
+}
 .formdk{
     justify-content: center;
     align-items: center;
@@ -71,7 +85,7 @@ export default{
     padding: 20px;
 }
 .formdk button{
-    background-color: rgb(50, 205, 108);
+    background-color: rgb(247, 137, 206);
     color: #fff;
     width: 100%;
 }
